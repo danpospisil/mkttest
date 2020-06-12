@@ -1,0 +1,9 @@
+# RouterOS 6.46.5
+# software id = 
+#
+#
+#
+/interface ethernet set [ find default-name=ether1 ] disable-running-check=no name=spaces
+/interface vlan add interface=spaces name=vlan1 vlan-id=1
+/interface wireless security-profiles set [ find default=yes ] supplicant-identity=MikroTik
+/ip dhcp-client add disabled=no interface=spaces
